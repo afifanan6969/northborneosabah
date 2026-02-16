@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Order Confirmed — Northborne O Sabah</title>
+    <meta name="description" content="Your order has been confirmed. Thank you for shopping with us!" />
+    <style>
+      body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(135deg,#f3f7f6,#e9eff2);color:#0f1724;background-attachment:fixed;display:flex;align-items:center;justify-content:center;min-height:100vh}
+      body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(11,102,35,0.03) 1px, transparent 1px);background-size:26px 26px;opacity:0.9;pointer-events:none}
+      .container{max-width:600px;margin:0 auto;padding:20px}
+      .card{background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);padding:40px;border-radius:12px;box-shadow:0 8px 32px rgba(11,102,35,0.1);text-align:center}
+      .success-icon{font-size:64px;margin-bottom:16px}
+      h1{margin:0 0 12px;color:#0b6623;font-size:2rem}
+      p{color:#6b7280;line-height:1.6;margin:16px 0}
+      .cta{display:inline-block;padding:12px 24px;background:#0b6623;color:#fff;border-radius:8px;text-decoration:none;margin-top:20px;transition:all 0.3s}
+      .cta:hover{background:#154d2e;transform:translateY(-2px);box-shadow:0 8px 16px rgba(11,102,35,0.2)}
+      .details{background:#f0fff4;border:1px solid #86efac;border-radius:8px;padding:16px;margin:20px 0;text-align:left;font-size:0.95rem;color:#1e7a3a}
+      .details strong{display:block;margin-bottom:8px}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="success-icon">✅</div>
+        <h1>Order Confirmed!</h1>
+        <p>Thank you for your purchase from <strong>Northborne O Sabah</strong>.</p>
+        <p>Your order has been successfully processed. A confirmation email will be sent to your inbox shortly.</p>
+        
+        <div class="details">
+          <strong>What happens next?</strong>
+          <p style="margin:8px 0">We'll prepare your order and arrange delivery or pickup within 3-5 business days. You'll receive tracking information via email.</p>
+        </div>
+
+        <p>Order number: <code style="background:#f3f7f6;padding:4px 8px;border-radius:4px">#NOS-{{timestamp}}</code></p>
+        <p style="color:#6b7280;font-size:0.9rem">For support, contact <a href="mailto:shop@northborneosabah.my" style="color:#0b6623">shop@northborneosabah.my</a></p>
+
+        <a href="shop.html" class="cta">← Continue Shopping</a>
+        <a href="index.html" class="cta" style="background:#6b7280;margin-left:8px">Back to Home</a>
+      </div>
+    </div>
+    <script>
+      // Generate order number timestamp
+      document.querySelector('code').textContent = '#NOS-' + Date.now();
+    </script>
+  </body>
+</html>

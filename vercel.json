@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "buildCommand": "npm install",
+  "env": {
+    "STRIPE_SECRET_KEY": "@stripe_secret_key",
+    "CIMB_CLIENT_ID": "@cimb_client_id",
+    "CIMB_CLIENT_SECRET": "@cimb_client_secret",
+    "AMANI_ACCOUNT": "@amani_account"
+  },
+  "functions": {
+    "server.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "^/api/.*",
+      "dest": "server.js"
+    },
+    {
+      "src": "^/create-checkout-session",
+      "dest": "server.js"
+    },
+    {
+      "src": "^/create-cimb-payment",
+      "dest": "server.js"
+    },
+    {
+      "src": "^/health",
+      "dest": "server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
