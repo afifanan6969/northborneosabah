@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Agriculture & Aquaponics — Northborne O Sabah</title>
+    <meta name="description" content="Sustainable agriculture and aquaponics initiatives in Sabah" />
+    <style>
+      body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(135deg,#f3f7f6,#e9eff2);color:#0f1724;background-attachment:fixed}
+      body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(11,102,35,0.03) 1px, transparent 1px);background-size:26px 26px;opacity:0.9;pointer-events:none}
+      .container{max-width:1000px;margin:32px auto;padding:20px}
+      .card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.06);margin-bottom:20px}
+      h1{margin:0 0 8px;font-size:1.4rem;color:#0b6623}
+      h2{font-size:1.2rem;color:#0b6623;margin:18px 0 10px}
+      h3{font-size:1rem;color:#154d2e;margin:12px 0 8px}
+      p{color:#6b7280;line-height:1.5}
+      .muted{color:#6b7280;font-size:0.9rem}
+      .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+      .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+      .benefit-box{background:linear-gradient(135deg,#fbfefb,#f0fff4);padding:14px;border-radius:10px;border-left:4px solid #0b6623}
+      .benefit-icon{font-size:1.8rem;margin-bottom:6px}
+      .benefit-title{font-weight:600;color:#0b6623;margin-bottom:4px}
+      .subsystem{background:#f9fdf8;padding:14px;border-radius:10px;border:1px solid #eef2e9;margin-bottom:12px}
+      .subsystem h4{margin:0 0 6px;color:#0b6623;font-size:0.95rem}
+      .subsystem p{margin:0;font-size:0.9rem}
+      .method-card{background:linear-gradient(135deg,#fff,#fbfefb);padding:12px;border-radius:10px;border:1px solid #eef2e9;text-align:center}
+      .method-icon{font-size:2rem;margin-bottom:6px}
+      .method-name{font-weight:600;color:#0b6623;margin-bottom:4px}
+      .stats-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:12px}
+      .stat-card{background:linear-gradient(135deg,#fbfefb,#f0fff4);padding:12px;border-radius:10px;text-align:center;border:1px solid rgba(11,102,35,0.1)}
+      .stat-number{font-size:1.6rem;font-weight:700;color:#0b6623}
+      .stat-text{color:#6b7280;font-size:0.9rem;margin-top:4px}
+      @media(max-width:700px){.grid-2{grid-template-columns:1fr}}
+      /* Modern sidebox */
+      .sidebox{background:linear-gradient(135deg,#fff 0%,#fbfefb 100%);padding:14px;border-radius:12px;border:1.5px solid rgba(11,102,35,0.12);box-shadow:0 10px 30px rgba(11,102,35,0.08);transition:all 0.3s;opacity:0.3;margin-bottom:16px}
+      .sidebox:hover{opacity:0.95;transform:translateY(-2px);box-shadow:0 15px 40px rgba(11,102,35,0.12)}
+      .sidebox h4{margin:0 0 10px;color:#0b6623;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px}
+      .sidebox a{display:block;color:#0b6623;text-decoration:none;margin:6px 0;font-size:0.9rem;transition:color 0.2s}
+      .sidebox a:hover{color:#154d2e;font-weight:500}
+      /* Social buttons */
+      .social-links{display:flex;gap:10px;margin-top:12px;justify-content:center}
+      .social-btn{width:40px;height:40px;border-radius:8px;border:1px solid rgba(11,102,35,0.2);background:#fff;color:#0b6623;text-decoration:none;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-size:18px;font-weight:600}
+      .social-btn:hover{background:#0b6623;color:#fff;transform:translateY(-2px)}
+      /* Glassmorphism Effects */
+      .sidebox, .card, .benefit-card, .stat-card, .section{background:rgba(255,255,255,0.75) !important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2)}
+      /* Scroll Animation Keyframes */
+      @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+      .benefit-card, .stat-card, .card, .section{opacity:0;transition:opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease}
+      .benefit-card.animate-in, .stat-card.animate-in, .card.animate-in, .section.animate-in{animation:fadeInUp 0.6s ease forwards;opacity:1;transform:translateY(0)}
+      a:hover, button:hover{transition:all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)}
+    </style>
+    <link rel="stylesheet" href="chat-style.css">
+    <script defer src="chat-widget.js"></script>
+    <link rel="stylesheet" href="music-style.css">
+    <script defer src="music-widget.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Agriculture & Aquaponics Initiatives</h1>
+        <p class="unmuted">Sustainable farming practices and integrated aquaponic systems for food security and environmental stewardship in Sabah.</p>
+
+        <aside class="sidebox" aria-label="Related">
+          <h4>Related</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="finance.html">Finance</a>
+          <a href="register.html">Register</a>
+          <a href="mailto:info@northborneosabah.my">Contact</a>
+        </aside>
+
+        <!-- Overview -->
+        <section>
+          <h2>Our Agricultural Mission</h2>
+          <p>We promote sustainable agriculture practices across northern Sabah, combining traditional farming methods with modern aquaponic technology to maximize yields while minimizing environmental impact. Our integrated approach supports farmer livelihoods and ensures food security for local communities.</p>
+        </section>
+
+        <!-- Key Benefits -->
+        <section>
+          <h2>Why Sustainable Agriculture & Aquaponics?</h2>
+          <div class="grid-3">
+            <div class="benefit-box">
+              <div class="benefit-icon">🌱</div>
+              <div class="benefit-title">Higher Yields</div>
+              <p class="play">Produce up to 70% more food with 90% less water than conventional farming</p>
+            </div>
+            <div class="benefit-box">
+              <div class="benefit-icon">💧</div>
+              <div class="benefit-title">Water Efficiency</div>
+              <p class="play">Aquaponic systems recirculate water, reducing waste and conserving this vital resource</p>
+            </div>
+            <div class="benefit-box">
+              <div class="benefit-icon">♻️</div>
+              <div class="benefit-title">Eco-Friendly</div>
+              <p class="play">Zero pesticides, zero synthetic fertilizers — purely organic nutrient cycling</p>
+            </div>
+            <div class="benefit-box">
+              <div class="benefit-icon">💰</div>
+              <div class="benefit-title">Economic Growth</div>
+              <p class="play">Farmers earn 30-50% more income from high-margin crops and fish</p>
+            </div>
+            <div class="benefit-box">
+              <div class="benefit-icon">🏥</div>
+              <div class="benefit-title">Healthier Food</div>
+              <p class="play">Nutrient-rich vegetables and protein with no chemical residues</p>
+            </div>
+            <div class="benefit-box">
+              <div class="benefit-icon">👨‍🌾</div>
+              <div class="benefit-title">Community Empowerment</div>
+              <p class="play">Training & support help farmers become independent entrepreneurs</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Implementation Stats -->
+        <section>
+          <h2>Our Progress</h2>
+          <div class="stats-section">
+            <div class="stat-card">
+              <div class="stat-number">42</div>
+              <div class="stat-text">Active Aquaponic Systems</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">1,200+</div>
+              <div class="stat-text">Farmers Trained</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">845 MT</div>
+              <div class="stat-text">Annual Produce</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">89%</div>
+              <div class="stat-text">Water Savings</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Aquaponic Systems -->
+        <section>
+          <h2>How Aquaponics Works</h2>
+          <p>Aquaponics is a closed-loop system combining aquaculture (fish farming) with hydroponics (soil-free plant production). Fish waste becomes nutrient-rich water for plants; plants filter the water for the fish.</p>
+          
+          <div style="margin-top:12px">
+            <div class="subsystem">
+              <h4>🐟 Fish Tank (Aquaculture)</h4>
+              <p>Tilapia, catfish, or local species are raised in controlled water systems. Their waste creates bioavailable nutrients that feed the plants above.</p>
+            </div>
+            <div class="subsystem">
+              <h4>🌿 Grow Beds (Hydroponics)</h4>
+              <p>Vegetables, herbs, and leafy greens thrive in the nutrient-rich water pumped from fish tanks, without any soil or synthetic fertilizers.</p>
+            </div>
+            <div class="subsystem">
+              <h4>🔄 Biofilter & Circulation</h4>
+              <p>Beneficial bacteria convert fish ammonia to nitrate, which feeds plants. Clean water returns to fish, creating a sustainable cycle.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Farming Methods -->
+        <section>
+          <h2>Our Farming Methods</h2>
+          <div class="grid-3">
+            <div class="method-card">
+              <div class="method-icon">🌾</div>
+              <div class="method-name">Rainwater Harvesting</div>
+              <p class="muted">Capture monsoon rains for irrigation and aquaponic systems</p>
+            </div>
+            <div class="method-card">
+              <div class="method-icon">🍄</div>
+              <div class="method-name">Composting</div>
+              <p class="muted">Turn crop residue into organic fertilizer for soil enrichment</p>
+            </div>
+            <div class="method-card">
+              <div class="method-icon">🦋</div>
+              <div class="method-name">Crop Rotation</div>
+              <p class="muted">Maintain soil health by rotating crops seasonally</p>
+            </div>
+            <div class="method-card">
+              <div class="method-icon">🪱</div>
+              <div class="method-name">Pest Management</div>
+              <p class="muted">Integrated pest control using natural predators & netting</p>
+            </div>
+            <div class="method-card">
+              <div class="method-icon">☀️</div>
+              <div class="method-name">Renewable Energy</div>
+              <p class="muted">Solar pumps & wind power reduce operational costs</p>
+            </div>
+            <div class="method-card">
+              <div class="method-icon">📊</div>
+              <div class="method-name">Data Tracking</div>
+              <p class="muted">Digital monitoring of soil, water, & crop health</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Crops & Products -->
+        <section>
+          <h2>Featured Crops & Products</h2>
+          <div class="grid-2">
+            <div style="padding:12px;background:#f9fdf8;border-radius:10px">
+              <h3>🥬 Vegetables</h3>
+              <p>Lettuce, spinach, kale, cabbage, tomatoes, peppers, cucumbers — all year-round production.</p>
+            </div>
+            <div style="padding:12px;background:#f9fdf8;border-radius:10px">
+              <h3>🌿 Herbs & Spices</h3>
+              <p>Basil, cilantro, mint, turmeric, ginger — high-value crops for local & export markets.</p>
+            </div>
+            <div style="padding:12px;background:#f9fdf8;border-radius:10px">
+              <h3>🐟 Protein</h3>
+              <p>Tilapia, catfish, and freshwater shrimp — protein-rich food with minimal environmental impact.</p>
+            </div>
+            <div style="padding:12px;background:#f9fdf8;border-radius:10px">
+              <h3>🥜 Specialty Crops</h3>
+              <p>Microgreens, edible flowers, and organic seeds for premium market segments.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Training & Support -->
+        <section>
+          <h2>Training & Support Programs</h2>
+          <p>We offer comprehensive training to farmers, cooperatives, and entrepreneurs interested in adopting sustainable agriculture and aquaponics:</p>
+          <ul style="color:#6b7280;line-height:1.8">
+            <li><strong>Hands-on Workshops:</strong> System design, setup, and daily operations</li>
+            <li><strong>Technical Support:</strong> On-site visits, troubleshooting, and optimization</li>
+            <li><strong>Business Training:</strong> Pricing, marketing, supply chain, and financial management</li>
+            <li><strong>Certification Programs:</strong> Organic & sustainable farming certifications</li>
+            <li><strong>Community Networks:</strong> Farmer cooperatives for bulk purchasing and sales</li>
+            <li><strong>Microcredit Options:</strong> Low-interest loans to start or expand operations</li>
+          </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <section style="background:#f9fdf8;padding:16px;border-radius:10px;margin-top:18px;border-left:4px solid #0b6623">
+          <h2 style="margin-top:0">Get Started Today</h2>
+          <p>Whether you're a farmer, investor, or environmental advocate, we have opportunities for you:</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+            <a href="register.html" style="background:#0b6623;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:500">Join Our Community</a>
+            <a href="finance.html" style="background:#e6edf0;color:#0b6623;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:500;border:1px solid #0b6623">Explore Investment Options</a>
+            <a href="mailto:info@northborneosabah.my" style="background:#e6edf0;color:#0b6623;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:500;border:1px solid #0b6623">Request Training Info</a>
+            <a id="invest-cimb" href="#" style="background:#0b6623;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;border:1px solid #0b6623">Invest via CIMB (Sandbox)</a>
+          </div>
+        </section>
+
+        <p style="margin-top:16px"><a href="index.html">← Back to home</a></p>
+
+        <!-- Social Links -->
+        <div style="margin-top:20px;text-align:center;border-top:1px solid #eef2ee;padding-top:12px">
+          <div class="muted" style="font-size:0.9rem;margin-bottom:8px">Follow us on social media:</div>
+          <div class="social-links">
+            <a class="social-btn" href="https://facebook.com" title="Facebook" target="_blank">f</a>
+            <a class="social-btn" href="https://twitter.com" title="Twitter" target="_blank">𝕏</a>
+            <a class="social-btn" href="https://instagram.com" title="Instagram" target="_blank">📷</a>
+            <a class="social-btn" href="https://linkedin.com" title="LinkedIn" target="_blank">in</a>
+            <a class="social-btn" href="https://wa.me/" title="WhatsApp" target="_blank">💬</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</body>
+  <script>
+    // Real CIMB API investment flow (client-side)
+    (function(){
+      const btn = document.getElementById('invest-cimb');
+      if(!btn) return;
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        
+        // Show investment modal
+        showCIMBInvestmentModal();
+      });
+
+      function showCIMBInvestmentModal() {
+        const html = `
+          <div style="position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999" id="cimb-modal">
+            <div style="background:#fff;border-radius:12px;padding:24px;max-width:400px;width:90%;box-shadow:0 20px 40px rgba(0,0,0,0.2)">
+              <h2 style="margin:0 0 16px;color:#0b6623">Invest via CIMB</h2>
+              <p style="color:#6b7280;margin:0 0 16px">Support sustainable agriculture in Sabah with a secure CIMB payment</p>
+              
+              <label style="display:block;margin-bottom:12px">
+                <span style="color:#0f1724;font-weight:500;display:block;margin-bottom:4px">Amount (MYR)</span>
+                <input type="number" id="invest-amount" placeholder="e.g. 500" min="1" step="1" style="width:100%;padding:8px;border:1px solid #e5e7eb;border-radius:6px;font-size:1rem" />
+              </label>
+
+              <label style="display:block;margin-bottom:16px">
+                <span style="color:#0f1724;font-weight:500;display:block;margin-bottom:4px">Description (optional)</span>
+                <input type="text" id="invest-desc" placeholder="e.g. Aquaponic system support" style="width:100%;padding:8px;border:1px solid #e5e7eb;border-radius:6px;font-size:0.95rem" />
+              </label>
+              
+              <div style="display:flex;gap:8px">
+                <button id="invest-submit" style="flex:1;background:#0b6623;color:#fff;border:0;padding:10px;border-radius:6px;cursor:pointer;font-weight:600">Proceed to Payment</button>
+                <button id="invest-close" style="flex:1;background:#e5e7eb;color:#0f1724;border:0;padding:10px;border-radius:6px;cursor:pointer;font-weight:600">Cancel</button>
+              </div>
+            </div>
+          </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', html);
+        const modal = document.getElementById('cimb-modal');
+        const submitBtn = document.getElementById('invest-submit');
+        const closeBtn = document.getElementById('invest-close');
+        const amountInput = document.getElementById('invest-amount');
+        const descInput = document.getElementById('invest-desc');
+
+        closeBtn.addEventListener('click', () => modal.remove());
+        modal.addEventListener('click', (e) => {
+          if(e.target === modal) modal.remove();
+        });
+
+        submitBtn.addEventListener('click', async () => {
+          const amount = Number(amountInput.value);
+          if(!amount || isNaN(amount) || amount <= 0) {
+            alert('Please enter a valid amount');
+            return;
+          }
+          const desc = descInput.value.trim() || 'Investment in Northborne O Sabah agriculture initiatives';
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Processing...';
+          
+          try {
+            const resp = await fetch('http://localhost:4242/create-cimb-payment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ amount: amount * 100, currency: 'MYR', description: desc })
+            });
+            const data = await resp.json();
+            if(!resp.ok) {
+              throw new Error(data.error || 'Payment creation failed');
+            }
+            modal.remove();
+            showPaymentResult(data);
+          } catch(err) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Proceed to Payment';
+            alert('Error: ' + err.message);
+          }
+        });
+      }
+
+      function showPaymentResult(data) {
+        const statusColor = data.status === 'success' ? '#0b6623' : '#e11d48';
+        const html = `
+          <div style="position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999" id="result-modal">
+            <div style="background:#fff;border-radius:12px;padding:24px;max-width:500px;width:90%;box-shadow:0 20px 40px rgba(0,0,0,0.2)">
+              <div style="text-align:center;margin-bottom:20px">
+                <div style="font-size:3rem;margin-bottom:12px">${data.status === 'success' ? '✅' : '⚠️'}</div>
+                <h2 style="margin:0;color:${statusColor}">${data.status === 'success' ? 'Payment Initiated' : 'Status: ' + data.status}</h2>
+              </div>
+              
+              <div style="background:#f9fdf8;border-left:4px solid #0b6623;padding:12px;border-radius:6px;margin-bottom:16px;font-size:0.9rem;line-height:1.6">
+                <p><strong>Payment ID:</strong> ${data.payment_id}</p>
+                <p><strong>Amount:</strong> ${(data.amount/100).toFixed(2)} ${data.currency}</p>
+                <p><strong>Beneficiary:</strong> ${data.beneficiary_name}</p>
+                <p><strong>Status:</strong> ${data.status}</p>
+                <p><strong>Created:</strong> ${new Date(data.created_at).toLocaleString()}</p>
+              </div>
+
+              ${data.consent_url ? `
+                <p style="color:#6b7280;margin:0 0 12px;font-size:0.9rem">Please authorize the payment via CIMB's secure consent page:</p>
+                <a href="${data.consent_url}" target="_blank" style="display:block;padding:10px;background:#0b6623;color:#fff;text-align:center;border-radius:6px;text-decoration:none;font-weight:600;margin-bottom:12px">Open CIMB Consent Page</a>
+              ` : ''}
+              
+              <button id="result-close" style="width:100%;background:#e5e7eb;color:#0f1724;border:0;padding:10px;border-radius:6px;cursor:pointer;font-weight:600">Close</button>
+            </div>
+          </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', html);
+        const modal = document.getElementById('result-modal');
+        document.getElementById('result-close').addEventListener('click', () => modal.remove());
+      }
+    })();
+  </script>
+  <script src="scroll-animations.js"></script>
+</html>

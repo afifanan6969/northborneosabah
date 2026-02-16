@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Northborne O Sabah</title>
+    <meta name="description" content="About Northborne O Sabah: mission, team, and company organization root" />
+    <style>
+      body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(135deg,#f3f7f6,#e9eff2);color:#0f1724;background-attachment:fixed}
+      body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(11,102,35,0.03) 1px, transparent 1px);background-size:26px 26px;opacity:0.9;pointer-events:none}
+      .container{max-width:900px;margin:32px auto;padding:20px}
+      .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.06);position:relative}
+      h1{margin:0 0 6px}
+      p.lead{color:#6b7280;margin:0 0 14px}
+      .org-root{margin-top:18px}
+      .tree ul{list-style:none;padding-left:20px;margin:8px 0}
+      .tree li{margin:6px 0;padding:8px;border-radius:8px;background:linear-gradient(180deg,#fff,#f8faf8);border:1px solid #eef2e9}
+      .node{display:flex;justify-content:space-between;align-items:center}
+      .node .meta{color:#374151;font-size:0.95rem}
+      .toggle{background:#0b6623;color:#fff;border-radius:6px;padding:4px 8px;border:0;cursor:pointer;font-size:0.85rem}
+      /* Modern sided-box with frame */
+      .sidebox{background:linear-gradient(135deg,#fff 0%,#fbfefb 100%);padding:14px;border-radius:12px;border:1.5px solid rgba(11,102,35,0.12);box-shadow:0 10px 30px rgba(11,102,35,0.08);transition:all 0.3s;opacity:0.3}
+      .sidebox:hover{opacity:0.95;transform:translateY(-2px);box-shadow:0 15px 40px rgba(11,102,35,0.12)}
+      .sidebox h4{margin:0 0 10px;color:#0b6623;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px}
+      .sidebox a{display:block;color:#0b6623;text-decoration:none;margin:6px 0;font-size:0.9rem;transition:color 0.2s}
+      .sidebox a:hover{color:#154d2e;font-weight:500}
+      @media(max-width:700px){.sidebox{position:static;width:auto;margin:12px 0;opacity:0.5}}
+      .muted{color:#6b7280}
+      /* Hero section with Mount Kinabalu image */
+      .hero-bg{background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop');background-size:cover;background-position:center;height:280px;border-radius:12px 12px 0 0;position:relative;overflow:hidden}
+      .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,102,35,0.2),rgba(21,77,46,0.3))}
+      .hero-caption{position:absolute;bottom:12px;left:12px;right:12px;color:#fff;font-size:0.95rem;text-shadow:0 2px 8px rgba(0,0,0,0.3);z-index:1}
+      /* Social buttons */
+      .social-links{display:flex;gap:10px;margin-top:12px;justify-content:center}
+      .social-btn{width:40px;height:40px;border-radius:8px;border:1px solid rgba(11,102,35,0.2);background:#fff;color:#0b6623;text-decoration:none;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-size:18px;font-weight:600}
+      .social-btn:hover{background:#0b6623;color:#fff;transform:translateY(-2px)}
+      /* Glassmorphism Effects */
+      .sidebox, .card, .stat-card, .org-box, .section{background:rgba(255,255,255,0.75) !important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2)}
+      /* Scroll Animation Keyframes */
+      @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+      .org-box, .card, .section{opacity:0;transition:opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease}
+      .org-box.animate-in, .card.animate-in, .section.animate-in{animation:fadeInUp 0.6s ease forwards;opacity:1;transform:translateY(0)}
+      a:hover, button:hover{transition:all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)}
+    </style>
+    <link rel="stylesheet" href="chat-style.css">
+    <script defer src="chat-widget.js"></script>
+    <link rel="stylesheet" href="music-style.css">
+    <script defer src="music-widget.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="hero-bg">
+          <div class="hero-caption">Mount Kinabalu — Sabah's iconic peak at the heart of our region</div>
+        </div>
+        
+        <div style="padding:18px">
+          <h1>About Northborne O Sabah</h1>
+          <p class="lead">We support sustainable agriculture, empower local farmers, and build community-driven markets across northern Sabah.</p>
+
+          <aside class="sidebox" aria-label="Related">
+            <h4>Related</h4>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="agriculture.html">Agriculture</a>
+            <a href="register.html">Register</a>
+            <a href="finance.html">Finance</a>
+          <h2>Mission</h2>
+          <p class="muted">To increase food security and sustainable livelihoods through training, cooperative access, and direct-to-consumer channels.</p>
+        </section>
+
+        <section class="org-root">
+          <h2>Company Organization (root)</h2>
+          <p class="muted">Click the expand buttons to view departments and roles.</p>
+
+          <div class="tree" id="orgTree">
+            <ul>
+              <li>
+                <div class="node">
+                  <div>
+                    <strong>Board / Founders</strong>
+                    <div class="meta">Strategy & governance</div>
+                  </div>
+                  <button class="toggle" data-target>Expand</button>
+                </div>
+                <ul class="children" hidden>
+                  <li>
+                    <div class="node">
+                      <div>
+                        <strong>Executive Director</strong>
+                        <div class="meta">Leadership & operations</div>
+                      </div>
+                      <button class="toggle" data-target>Expand</button>
+                    </div>
+                    <ul class="children" hidden>
+                      <li>
+                        <div class="node">
+                          <div>
+                            <strong>Programs Manager</strong>
+                            <div class="meta">Farmer training, outreach</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="node">
+                          <div>
+                            <strong>Operations Manager</strong>
+                            <div class="meta">Logistics & distribution</div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="node">
+                          <div>
+                            <strong>Finance & Admin</strong>
+                            <div class="meta">Accounts & compliance</div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="node">
+                      <div>
+                        <strong>Partnerships & Marketing</strong>
+                        <div class="meta">Grants, donors, market access</div>
+                      </div>
+                      <button class="toggle" data-target>Expand</button>
+                    </div>
+                    <ul class="children" hidden>
+                      <li>
+                        <div class="node"><div><strong>Community Liaison</strong><div class="meta">Local coordination</div></div></div>
+                      </li>
+                      <li>
+                        <div class="node"><div><strong>Digital Marketing</strong><div class="meta">Website & outreach</div></div></div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section style="margin-top:18px">
+          <h2>Contact</h2>
+          <p class="muted">For governance, partnership, or media inquiries, email <a href="mailto:info@northborneosabah.my">info@northborneosabah.my</a>.</p>
+        </section>
+
+        <p style="margin-top:12px"><a href="index.html">← Back to home</a></p>
+        
+        <div style="margin-top:18px;text-align:center;border-top:1px solid #eef2ee;padding-top:12px">
+          <div class="muted" style="font-size:0.9rem;margin-bottom:8px">Connect with us on social media:</div>
+          <div class="social-links">
+            <a class="social-btn" href="https://facebook.com" title="Facebook" target="_blank">f</a>
+            <a class="social-btn" href="https://twitter.com" title="Twitter" target="_blank">𝕏</a>
+            <a class="social-btn" href="https://instagram.com" title="Instagram" target="_blank">📷</a>
+            <a class="social-btn" href="https://linkedin.com" title="LinkedIn" target="_blank">in</a>
+            <a class="social-btn" href="https://wa.me/" title="WhatsApp" target="_blank">💬</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.toggle').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const li = btn.closest('li');
+          const children = li.querySelector(':scope > .children');
+          if(!children) return;
+          const open = !children.hidden;
+          children.hidden = open;
+          btn.textContent = open ? 'Expand' : 'Collapse';
+        });
+      });
+    </script>
+    <script src="scroll-animations.js"></script>
+  </body>
+</html>

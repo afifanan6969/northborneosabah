@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register — Northborne O Sabah</title>
+    <meta name="description" content="Membership registration for Northborne O Sabah" />
+    <style>
+      :root{--accent:#0b6623;--muted:#6b7280;--bg:#f3f7f6}
+      *{box-sizing:border-box}
+      body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,#f3f7f6,#e9eff2);color:#0f1724;background-attachment:fixed}
+      body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(11,102,35,0.03) 1px, transparent 1px);background-size:26px 26px;opacity:0.9;pointer-events:none}
+      .container{max-width:760px;margin:36px auto;padding:20px}
+      .card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 8px 24px rgba(2,6,23,0.06);position:relative}
+      h1{margin:0 0 8px;font-size:1.4rem}
+      p.lead{color:var(--muted);margin:0 0 16px}
+      form{display:grid;gap:12px}
+      /* two-column layout: form + video */
+      .columns{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+      .video-box{background:linear-gradient(180deg,#fff,#fbfffb);padding:12px;border-radius:10px;border:1px solid #eef6ec}
+      .video-box iframe, .video-box video{width:100%;height:180px;border-radius:8px}
+      label{font-size:0.9rem;color:#111;margin-bottom:6px;display:block}
+      input,select,textarea{width:100%;padding:10px;border:1px solid #e6e9ee;border-radius:8px;font-size:0.95rem}
+      .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+      .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+      .muted{color:var(--muted);font-size:0.9rem}
+      .message{padding:10px;border-radius:8px}
+      .error{background:#fff5f5;border:1px solid #f5c2c7;color:#9b1c1c}
+      .success{background:#f0fff4;border:1px solid #c6f6d5;color:#1e7a3a}
+      /* Modern sided-box with frame */
+      .sidebox{background:linear-gradient(135deg,#fff 0%,#fbfefb 100%);padding:14px;border-radius:12px;border:1.5px solid rgba(11,102,35,0.12);box-shadow:0 10px 30px rgba(11,102,35,0.08);transition:all 0.3s;opacity:0.3}
+      .sidebox:hover{opacity:0.95;transform:translateY(-2px);box-shadow:0 15px 40px rgba(11,102,35,0.12)}
+      .sidebox h4{margin:0 0 10px;color:var(--accent);font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px}
+      .sidebox a{display:block;color:var(--accent);text-decoration:none;margin:6px 0;font-size:0.9rem;transition:color 0.2s}
+      .sidebox a:hover{color:#154d2e;font-weight:500}
+      /* Social buttons */
+      .social-links{display:flex;gap:10px;margin-top:12px}
+      .social-btn{width:36px;height:36px;border-radius:8px;border:1px solid rgba(11,102,35,0.2);background:#fff;color:#0b6623;text-decoration:none;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-size:18px}
+      .social-btn:hover{background:#0b6623;color:#fff;transform:translateY(-2px)}
+      /* Complaint/Suggestion form */
+      .feedback-section{margin-top:20px;padding-top:20px;border-top:1px solid #eef2ee}
+      .feedback-toggle{background:transparent;border:0;color:#0b6623;cursor:pointer;font-weight:600;font-size:0.95rem;text-align:left;width:100%;text-align:left;padding:6px 0}
+      .feedback-toggle:hover{color:#154d2e}
+      .feedback-form{display:none;margin-top:12px}
+      .feedback-form.open{display:block}
+      /* Glasmorphism Effects */
+      .sidebox, .card, .section, form{background:rgba(255,255,255,0.75) !important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2)}
+      /* Scroll Animation Keyframes */
+      @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+      .card, .section, form{opacity:0;transition:opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease}
+      .card.animate-in, .section.animate-in, form.animate-in{animation:fadeInUp 0.6s ease forwards;opacity:1;transform:translateY(0)}
+      a:hover, button:hover{transition:all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)}
+      @media(max-width:700px){.row{grid-template-columns:1fr}.sidebox{position:static;width:auto;margin:12px 0;opacity:0.5}}
+    </style>
+    <link rel="stylesheet" href="chat-style.css">
+    <script defer src="chat-widget.js"></script>
+    <link rel="stylesheet" href="music-style.css">
+    <script defer src="music-widget.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Membership registration</h1>
+        <p class="lead">Join Northborne O Sabah to receive updates and participate in community projects.</p>
+
+        <aside class="sidebox" aria-label="Related">
+          <h4>Related</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="agriculture.html">Agriculture</a>
+          <a href="finance.html">Finance</a>
+          <a href="shop.html">Shop</a>
+          <a href="login.html">Login</a>
+          <a href="mailto:info@northborneosabah.my">Contact</a>
+        </aside>
+
+        <div class="columns">
+          <form id="regForm" novalidate>
+            <div>
+              <label for="fullname">Full name</label>
+              <input id="fullname" name="fullname" type="text" required placeholder="Your full name">
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com">
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required minlength="8" placeholder="Minimum 8 characters">
+              </div>
+              <div>
+                <label for="confirm">Confirm password</label>
+                <input id="confirm" name="confirm" type="password" required placeholder="Repeat password">
+              </div>
+            </div>
+
+            <div>
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" placeholder="+60 12 345 6789">
+            </div>
+
+            <div>
+              <label for="org">Organization (optional)</label>
+              <input id="org" name="org" type="text" placeholder="Cooperative, NGO, etc.">
+            </div>
+
+            <div style="display:flex;gap:10px;align-items:center;margin-top:6px">
+              <button class="btn" type="submit">Register</button>
+              <div class="muted">Already have an account? <a href="login.html">Log in</a></div>
+            </div>
+
+            <div id="formMessage" style="margin-top:12px"></div>
+          </form>
+
+          <div class="video-box">
+            <h4 style="margin:0 0 8px">Intro video</h4>
+            <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Intro video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="muted" style="margin-top:8px">Watch a short introduction about our membership benefits and community projects.</p>
+          </div>
+        </div>
+
+        <!-- Complaint/Suggestion Form Section -->
+        <div class="feedback-section">
+          <button class="feedback-toggle" type="button">Have a complaint or suggestion? Share your feedback</button>
+          <form id="feedbackForm" class="feedback-form" novalidate>
+            <div>
+              <label for="feedbackName">Full name</label>
+              <input id="feedbackName" name="feedbackName" type="text" required placeholder="Your name">
+            </div>
+
+            <div>
+              <label for="feedbackEmail">Email</label>
+              <input id="feedbackEmail" name="feedbackEmail" type="email" required placeholder="your@email.com">
+            </div>
+
+            <div>
+              <label for="feedbackType">Type</label>
+              <select id="feedbackType" name="feedbackType" required>
+                <option value="">-- Select type --</option>
+                <option value="complaint">Complaint</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="feedback">General Feedback</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="feedbackMessage">Message</label>
+              <textarea id="feedbackMessage" name="feedbackMessage" required placeholder="Please share your feedback..." rows="4" style="resize:vertical"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit Feedback</button>
+            <div id="feedbackMessage" style="margin-top:12px"></div>
+          </form>
+        </div>
+
+        <!-- Social Media Links -->
+        <div style="margin-top:18px;text-align:center">
+          <div class="muted" style="font-size:0.9rem;margin-bottom:8px">Connect with us:</div>
+          <div class="social-links">
+            <a class="social-btn" href="https://facebook.com" title="Facebook" target="_blank">f</a>
+            <a class="social-btn" href="https://twitter.com" title="Twitter" target="_blank">𝕏</a>
+            <a class="social-btn" href="https://instagram.com" title="Instagram" target="_blank">📷</a>
+            <a class="social-btn" href="https://linkedin.com" title="LinkedIn" target="_blank">in</a>
+            <a class="social-btn" href="https://wa.me/" title="WhatsApp" target="_blank">💬</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById('regForm');
+      const msg = document.getElementById('formMessage');
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        msg.textContent = '';
+        msg.className = '';
+
+        const password = form.password.value.trim();
+        const confirm = form.confirm.value.trim();
+        if (password.length < 8) {
+          msg.textContent = 'Password must be at least 8 characters.';
+          msg.className = 'message error';
+          return;
+        }
+        if (password !== confirm) {
+          msg.textContent = 'Passwords do not match.';
+          msg.className = 'message error';
+          return;
+        }
+
+        // Note: This is a client-side demo. Implement server-side registration to store accounts.
+        msg.textContent = 'Registration submitted. We will contact you at the email provided.';
+        msg.className = 'message success';
+        form.reset();
+      });
+
+      // Feedback form toggle
+      const feedbackToggle = document.querySelector('.feedback-toggle');
+      const feedbackForm = document.getElementById('feedbackForm');
+      feedbackToggle.addEventListener('click', () => {
+        feedbackForm.classList.toggle('open');
+        feedbackToggle.textContent = feedbackForm.classList.contains('open') ? '✕ Close feedback' : 'Have a complaint or suggestion? Share your feedback';
+      });
+
+      // Feedback form submission
+      feedbackForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const msgEl = feedbackForm.querySelector('#feedbackMessage');
+        msgEl.textContent = 'Thank you for your feedback! We appreciate your input.';
+        msgEl.className = 'message success';
+        feedbackForm.reset();
+        setTimeout(() => { feedbackForm.classList.remove('open'); feedbackToggle.click(); }, 2000);
+      });
+    </script>
+    <script src="scroll-animations.js"></script>
